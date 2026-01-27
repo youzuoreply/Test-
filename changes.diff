@@ -1,0 +1,23 @@
+--- test.py	2026-01-27 14:06:14
++++ test2.py	2026-01-27 14:14:14
+@@ -1,5 +1,6 @@
+ from ultralytics import YOLO
+ 
++print("i changed")
+ # Load a pretrained YOLOv8 model
+ model = YOLO('yolov8n.pt')  # nano model (fastest)
+ 
+\ No newline at end of file
+@@ -9,4 +10,9 @@
+ # Display results
+ for result in results:
+     print(result)
+-    result.save(filename='output.jpg')
+\ No newline at end of file
++    result.save(filename='output.jpg')
++
++print("Inference complete. Results saved to output.jpg")
++
++if True:
++    print("This block always executes.")
+\ No newline at end of file
